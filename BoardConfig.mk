@@ -81,6 +81,15 @@ BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_ODM := odm
+TARGET_COPY_OUT_SYSTEM := system
+
+# File systems
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6771
@@ -92,6 +101,10 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 BOARD_HAS_LARGE_FILESYSTEM := true
+
+# Metadata
+BOARD_USES_METADATA_PARTITION := true
+BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
@@ -107,6 +120,7 @@ TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEFAULT_BRIGHTNESS := 1640
+TW_INCLUDE_LOGICAL := my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INTERNAL_STORAGE_PATH := "/data/media"

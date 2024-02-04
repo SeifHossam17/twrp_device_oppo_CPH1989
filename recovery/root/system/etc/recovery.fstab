@@ -1,11 +1,11 @@
 # mount point     fstype             device                             device2              flags
 /recovery	    emmc	/dev/block/platform/bootdevice/by-name/recovery         flags=display="Recovery";backup=1;flashimg=1
 /boot		    emmc	/dev/block/platform/bootdevice/by-name/boot             flags=backup=1;display="Boot" 
-/system_root	    ext4	/dev/block/platform/bootdevice/by-name/system	          flags=display="System";wipeingui;backup=0
+/system_root	    ext4	/dev/block/by-name/system	          flags=display="System";wipeingui;backup=0
 /system_image      emmc	/dev/block/by-name/system				  flags=backup=1;flashimg=1
 /cache		    ext4	/dev/block/platform/bootdevice/by-name/cache
 /data		    ext4	/dev/block/platform/bootdevice/by-name/userdata         flags=encryptable=/dev/block/platform/bootdevice/by-name/metadata
-/vendor            ext4        /dev/block/platform/bootdevice/by-name/vendor		  flags=backup=0;display="Vendor";wipeingui
+/vendor            ext4        /dev/block/by-name/vendor		  flags=backup=0;display="Vendor";wipeingui
 /vendor_image	    emmc	/dev/block/by-name/vendor				  flags=backup=1;flashimg=1
 /md1img		    emmc	/dev/block/platform/bootdevice/by-name/md1img           flags=display="Modem";backup=1
 /persistent	    emmc	/dev/block/platform/bootdevice/by-name/frp              flags=display="Frp";backup=1

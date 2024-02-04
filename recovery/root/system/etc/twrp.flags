@@ -32,5 +32,5 @@
 /tee1		    emmc	/dev/block/platform/bootdevice/by-name/tee1             flags=display="Tee";backup=1;flashimg=1
 /tee2		    emmc	/dev/block/platform/bootdevice/by-name/tee2             flags=backup=1;subpartitionof=/tee1
 
-/external_sd        auto	 /dev/block/mmcblk1p1	   /dev/block/mmcblk1            flags=display="Micro SD card";storage;wipeingui;removable
-/usb_otg	    auto        /dev/block/sda1             /dev/block/sda             flags=display="Usb-Otg";storage;removable;wipeingui
+/external_sd        auto	 /dev/block/mmcblk0p1	   /dev/block/mmcblk0            flags=display="Micro SD card";storage;wipeingui;removable
+/usb_otg	    auto        /dev/block/sdd1             /dev/block/sda             flags=display="Usb-Otg";storage;removable;wipeingui

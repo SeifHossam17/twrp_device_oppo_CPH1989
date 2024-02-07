@@ -4,4 +4,3 @@ ro.board.platform=mt6771
 ro.treble.enabled=true
 ro.vndk.version=30
 ro.mediatek.platform=MT6771
-persist.sys.usb.config=mtp,adb
